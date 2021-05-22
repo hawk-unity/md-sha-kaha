@@ -50,4 +50,3 @@ while True :
         me.update(md4.encode('utf-8'))
         print(me.hexdigest())
 
-     
