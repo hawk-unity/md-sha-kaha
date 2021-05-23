@@ -1,22 +1,18 @@
-import hashlib
 import hashlib as hasher
-
-print("""
+import hashlib 
+while True : 
+    print("""
         ----------------------------------------------------
          git hub : https://github.com/ka4ir    
         ----------------------------------------------------                                                 
          git hub : https://github.com/hawk-unity                                                         
         ----------------------------------------------------
-
                 1 - SHA512 CRYPT                         
                 2 - MD5 CRYPT         
                 3 - SHA 256 CRYPT
                 4 - SHA 224 CRYPT
                 5 - SHA 384 CRYPT
-                6 - MD 4 CRYPT
-""")
-while True : 
-
+                6 - MD 4 CRYPT """)
     seçim = input("Seçim yapınız: ")
     if seçim == "1":
         m=hashlib.sha512()
