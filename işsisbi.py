@@ -45,8 +45,7 @@ while True :
         me.update(sha384.encode('utf-8'))
         print(me.hexdigest())
     elif seçim == "6":
-        me=hashlib.md4()
-        md4 = input("STRİNG :")
-        me.update(md4.encode('utf-8'))
-        print(me.hexdigest())
-
+         text = input("STRİNG : ")
+         hashObject = hashlib.new('md4', text.encode('utf-8'))
+         digest = hashObject.hexdigest()
+         print(digest)
