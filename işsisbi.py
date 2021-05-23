@@ -1,5 +1,9 @@
 import hashlib as hasher
 import hashlib 
+import passlib 
+from passlib.hash import mssql2005 as m25
+from passlib.hash import mssql2000 as m20
+
 while True : 
     print("""
         ----------------------------------------------------
@@ -7,12 +11,14 @@ while True :
         ----------------------------------------------------                                                 
          git hub : https://github.com/hawk-unity                                                         
         ----------------------------------------------------
-                1 - SHA512 CRYPT                         
-                2 - MD5 CRYPT         
-                3 - SHA 256 CRYPT
-                4 - SHA 224 CRYPT
-                5 - SHA 384 CRYPT
-                6 - MD 4 CRYPT """)
+            1 - SHA512 CRYPT     |                     
+            2 - MD5 CRYPT        |  
+            3 - SHA 256 CRYPT    |
+            4 - SHA 224 CRYPT    |
+            5 - SHA 384 CRYPT    |
+            6 - MD 4 CRYPT       |
+			7 - MSSQL 2005 HASH  |
+				""")
     seçim = input("Seçim yapınız: ")
     if seçim == "1":
         m=hashlib.sha512()
@@ -45,3 +51,7 @@ while True :
          hashObject = hashlib.new('md4', text.encode('utf-8'))
          digest = hashObject.hexdigest()
          print(digest)
+    elif seçim == "7":
+		   x = input("STRİNG :")
+		   x2 = m25.hash(x)
+		   print("hash: "+ x2)
